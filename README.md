@@ -1,4 +1,4 @@
-# helloword
+# Hello World Chef CookBook 
+=============
 
-TODO: Enter the cookbook description here.
-
+Automated Hello World Java web application deployments on Dev/Prod environment via Chef Cookbook. 
