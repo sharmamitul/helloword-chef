@@ -1,0 +1,12 @@
+default[:'java'][:artifact_name] = "java"
+default[:'java'][:user]="webmaster"
+default[:'java'][:path]="/opt/helloword-chef/files/default/target/hello-world-war-1.0.0.war"
+when "dev"
+    default[:'java'][:env] = "dev"
+    default[:'java'][:MinHeap] = "100M"
+    default[:'java'][:MaxHeap] = "200M"
+when "prod"
+    default[:'java'][:env] = "prod"
+    default[:'java'][:MinHeap] = "100M"
+    default[:'java'][:MaxHeap] = "200M"
+end

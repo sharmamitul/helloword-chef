@@ -1,0 +1,5 @@
+export CATALINA_OPTS="-server -Djava.awt.headless=true -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=/opt/tomcat/heapdumps/ -XX:+UseParNewGC -XX:+UseConcMarkSweepGC -XX:+CMSIncrementalMode -XX:+CMSIncrementalPacing -Djava.net.preferIPv4Stack=true -Xms<%= node[:'java'][:MinHeap] %> -Xmx<%= node[:'java'][:MaxHeap] %> -Dcom.sun.management.jmxremote.port=1099 -Dcom.sun.management.jmxremote.rmi.port=1099 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dapplication.name=<%=node[:'java'][:'artifact_name'] %> -Dapplication.home=/opt/tomcat/ -Dapplication.environment=<%=node[:'java'][:env] %> $CATALINA_OPTS"
+#Path to Tomcat Home 
+export JAVA_HOME="/etc/alternatives/java"
+export TOMCAT_HOME="/opt/tomcat"
+export CATALINA_HOME=$TOMCAT_HOME
