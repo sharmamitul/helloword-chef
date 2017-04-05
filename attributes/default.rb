@@ -1,5 +1,6 @@
 default[:'java'][:artifact_name] = "java"
 default[:'java'][:user]="webmaster"
+default[:'java'][:group]="webmaster"
 default[:'java'][:path]="/opt/helloword-chef/files/default/target/hello-world-war-1.0.0.war"
 when "dev"
     default[:'java'][:env] = "dev"
